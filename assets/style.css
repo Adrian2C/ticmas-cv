@@ -4,12 +4,12 @@
 :root {
   --font: "Roboto", sans-serif;
 
-  --color-1:red;
-  --color-2:blue;
-  --color-3:green;
-  --color-4:black;
-  --color-5:white;
-  --color-6:orange;
+  --color-1: red;
+  --color-2: blue;
+  --color-3: green;
+  --color-4: black;
+  --color-5: white;
+  --color-6: orangered;
 }
 
 /* general */
@@ -45,11 +45,6 @@ body {
   background-color: #ffe8ac6c;
   font-family: var(--font);
 }
-
-h1 {
-  font-weight: 700;
-}
-
 footer {
   padding: 20px 0;
   margin: 15px 0 0;
@@ -60,12 +55,6 @@ footer {
   background-color: #000;
   color: #fff;
 }
-/* marco */
-/* .container {
-  max-width: 1250px;
-  margin-left: auto;
-  margin-right: auto;
-} */
 
 /*aside */
 .sidebar {
@@ -118,7 +107,7 @@ footer {
   right: 1.5rem;
   top: 2rem;
   font-size: 1.2rem;
-  background-color:var(--color-1);
+  background-color: var(--color-1);
   color: var(--color-5);
   display: none;
   justify-content: center;
@@ -154,17 +143,88 @@ footer {
 }
 
 /* main */
-.main{
-  width:100%;
-  height:90vh;
-  background-color:pink;
+.main {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  margin: 1rem;
 }
-.main__about{
+.main__about {
   text-align: center;
-  font-size: 30px;
+  font-size: 3rem;
 }
-.main__about span{
-  color:var(--color-6);
+.main h1 {
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin: 30px;
+}
+.main__about span {
+  color: var(--color-6);
+}
+.main h3 {
+  font-style: italic;
+}
+
+.main__data {
+  display: flex;
+  justify-content: space-evenly;
+
+  font-size: 1rem;
+  margin-top: -50px;
+  font-family: var(--font);
+  font-weight: 300;
+}
+.main__info {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+.social-icon {
+  font-size: 40px;
+  color: black;
+  margin-left: 10px;
+  transition: 0.5s ease all;
+}
+.social-icon::after {
+  margin-right: 10px;
+}
+.social-icon:hover {
+  transform: scale(1.5);
+}
+/* Experiencia */
+.experience {
+  width: 100%;
+}
+.title {
+  margin: 10px 0 50px 200px;
+  font-weight: 800;
+}
+.contenedor {
+  width: 50vw;
+  margin: 30px 50px;
+}
+.experience span {
+  position: absolute;
+  right: 10px;
+  width: 150px;
+  color: var(--color-6);
+}
+.contenedor h3 {
+  margin-bottom: 10px;
+}
+.contenedor h5 {
+  margin-bottom: 5px;
+}
+/* educacion */
+.education {
+  margin-top: 1.2rem;
+}
+/* skills */
+.skills__img i{
+  font-size: 100px;
 }
 /*========== MEDIA ==========*/
 
@@ -223,7 +283,7 @@ footer {
 
 @media screen and (min-width: 768px) {
   .sidebar {
-    background-color:var(--color-4);
+    background-color: var(--color-4);
   }
   .container__name {
     display: none;
